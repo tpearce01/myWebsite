@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
@@ -12,9 +12,14 @@
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/FinalTrial.json", {onProgress: UnityProgress});
     </script>
   </head>
-  <body style="overflow:hidden">
+  <body>
     <div class="webgl-content">
       <div id="gameContainer" style="width: 960px; height: 540px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">161Homework2</div>
+      </div>
     </div>
   </body>
 </html>
