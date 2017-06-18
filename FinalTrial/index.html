@@ -8,13 +8,40 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>  
     <script src="Build/UnityLoader.js"></script>
-    <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/FinalTrial.json", {onProgress: UnityProgress});
-    </script>
+      <script>
+          var gameInstance = UnityLoader.instantiate("gameContainer", "Build/FinalTrial.json", {onProgress: UnityProgress});
+      </script>
+      <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
   </head>
-  <body>
-    <div class="webgl-content">
-      <div id="gameContainer" style="width: 960px; height: 540px"></div>
-    </div>
+  <body style="overflow:hidden">
+  <div class="webgl-content">
+      <div style="width: 960px; margin: 0 auto;">
+          <div id="gameContainer" style="width: 960px; height: 540px"></div>
+        </div>
+          <div id="about" style="font-family: 'ABeeZee';">
+              <br /><br />
+              <h1>About this project</h1>
+              <ul>
+                  <h2>Roles</h2>
+                  <li>Solo project</li>
+              </ul>
+              <br />
+              <ul>
+                  <h2>Lessons Learned</h2>
+                  <li>
+                      <b>Programming</b> - With this project I really wanted to re-create some basic systems from third-person RPGs. I wanted the camera and movement to feel
+                      like World of Warcraft. Moving the camera with the mouse was more complicated than I initially believed, but I learned a lot by
+                      doing it. Using Tab to target enemies was also a fun obstacle to overcome. To overcome these challenges I learned a lot about
+                      cameras, viewports, and Renderers in Unity
+                  </li>
+                  <br />
+                  <li>
+                      <b>Design</b> - The biggest challenge I had was getting the players to know the controls. Players don't read the tutorial page, as expected, so the
+                      controls need to be obvious. I iterated through many different UI designs ranging from too little information to having too much information
+                      before settling on my final design. Finding the right balance was difficult, but absolutely worth the effort.
+                  </li>
+              </ul>
+          </div>
+      </div>
   </body>
 </html>

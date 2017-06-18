@@ -21,6 +21,7 @@
                     <li><button class="dropdown-button" onclick="LoadFlappy()">FLAPPY SPINNER</button></li>
                     <li><button class="dropdown-button" onclick="LoadSC()">SPACE COWBOY</button></li>
                     <li><button class="dropdown-button" onclick="LoadFinalTrial()">FINAL TRIAL</button></li>
+                    <li><button class="dropdown-button" onclick="LoadWebsiteInfo()">THIS WEBSITE</button></li>
                 </ul>
             </td>
             <td><button id="contact_button" onclick="LoadContact()">CONTACT</button></td>
@@ -60,27 +61,34 @@
     function LoadFlappy() {
         SwapFrame()
         currentiframe.src = "FlappyWeb/index.html";
-        currentiframe.height = "640px";
+        currentiframe.height = "1000px";
         lastFrameGame = true;
     }
 
     function LoadSC() {
         SwapFrame();
         currentiframe.src = "SCWeb/index.html"
-        currentiframe.height = "640px";
+        currentiframe.height = "1000px";
         lastFrameGame = true;
     }
 
     function LoadFinalTrial() {
         SwapFrame();
         currentiframe.src = "FinalTrial/index.html"
-        currentiframe.height = "640px";
+        currentiframe.height = "1000px";
         lastFrameGame = true;
     }
 
     function LoadContact() {
         SwapFrame();
         currentiframe.src = "contact.html";
+        currentiframe.height = "600vh";
+        lastFrameGame = false;
+    }
+
+    function LoadWebsiteInfo() {
+        SwapFrame();
+        currentiframe.src = "website_info.html";
         currentiframe.height = "600vh";
         lastFrameGame = false;
     }

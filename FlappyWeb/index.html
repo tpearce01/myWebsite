@@ -8,13 +8,36 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>  
     <script src="Build/UnityLoader.js"></script>
-    <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/FlappyWeb.json", {onProgress: UnityProgress});
-    </script>
+      <script>
+          var gameInstance = UnityLoader.instantiate("gameContainer", "Build/FlappyWeb.json", {onProgress: UnityProgress});
+      </script>
+      <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
   </head>
-  <body style="overflow:hidden">
-    <div class="webgl-content">
-      <div id="gameContainer" style="width: 320px; height: 568px"></div>
-    </div>
+  <body style="overflow: hidden;">
+  <div class="webgl-content">
+      <div style="width: 320px; margin: 0 auto;">
+          <div id="gameContainer" style="width: 320px; height: 568px;"></div>
+      </div>
+      <div id="about" style="font-family: 'ABeeZee';">
+          <br/><br/>
+          <h1>About this project</h1>
+          <ul>
+              <h2>Roles</h2>
+              <li>Solo Project</li>
+          </ul>
+          <br/>
+          <ul>
+              <h2>Lessons Learned</h2>
+              <li>
+                  <b>Programming</b> - This game was really fun for me to program. I focused on building modular and
+                  highly reusable code in order to cut back the development time due to a tight deadline. The content
+                  creation tools I created allowed me to fill in a few values on a form and pick enemy attack patterns
+                  from a dropdown menu, thus creating a new level in just a few minutes.
+              </li>
+              <br/>
+          </ul>
+      </div>
+  </div>
+
   </body>
 </html>
