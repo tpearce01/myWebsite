@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "FlappyWeb.data.unityweb",
+"asmCodeUrl": "FlappyWeb.asm.code.unityweb",
+"asmMemoryUrl": "FlappyWeb.asm.memory.unityweb",
+"asmFrameworkUrl": "FlappyWeb.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#000000"
+}

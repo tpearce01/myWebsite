@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+    <link rel="stylesheet" href="tyler_style.css">
+</head>
+
+<!--Header-->
+<h1>
+    <table><tr><td>Tyler Pearce</td></tr></table>
+</h1>
+
+<!--Navigation Menu-->
+<div class="navigation">
+    <table>
+        <tr>
+            <td><button id="home_button" onclick="LoadHome()">HOME</button></td>
+            <td><button id="resume_button" onClick="LoadResume()">RESUME</button></td>
+            <td class="dropdown">
+                <button id="portfolio_button">PORTFOLIO</button>
+                <ul class="dropdown-content">
+                    <li><button class="dropdown-button" onclick="LoadFlappy()">FLAPPY SPINNER</button></li>
+                    <li><button class="dropdown-button" onclick="LoadSC()">SPACE COWBOY</button></li>
+                    <li><button class="dropdown-button" onclick="LoadFinalTrial()">FINAL TRIAL</button></li>
+                </ul>
+            </td>
+            <td><button id="contact_button" onclick="LoadContact()">CONTACT</button></td>
+        </tr>
+    </table>
+</div>
+
+<!--Content-->
+<body>
+<div>    
+    <br/><br /><br />
+    <iframe id="ifr1" height="0"></iframe>
+    <iframe id="ifr2" height="0"></iframe>
+    <br /><br /><br />
+</div>
+</body>
+
+<!--Javascript-->
+<script>
+    var currentiframe = document.getElementById("ifr2");
+    var lastFrameGame = false;
+
+    function LoadHome() {
+        SwapFrame()
+        currentiframe.src = "home.html";
+        currentiframe.height = "600vh";
+        lastFrameGame = false;
+    }
+
+    function LoadResume() {
+        SwapFrame()
+        currentiframe.src = "resume.html";
+        currentiframe.height = "1300vh";
+        lastFrameGame = false;
+    }
+
+    function LoadFlappy() {
+        SwapFrame()
+        currentiframe.src = "FlappyWeb/index.html";
+        currentiframe.height = "640px";
+        lastFrameGame = true;
+    }
+
+    function LoadSC() {
+        SwapFrame();
+        currentiframe.src = "SCWeb/index.html"
+        currentiframe.height = "640px";
+        lastFrameGame = true;
+    }
+
+    function LoadFinalTrial() {
+        SwapFrame();
+        currentiframe.src = "FinalTrial/index.html"
+        currentiframe.height = "640px";
+        lastFrameGame = true;
+    }
+
+    function LoadContact() {
+        SwapFrame();
+        currentiframe.src = "contact.html";
+        currentiframe.height = "600vh";
+        lastFrameGame = false;
+    }
+
+    function SwapFrame() {
+        if (lastFrameGame) {
+            currentiframe.src = "none.html";
+        }
+        currentiframe.height = "0px";
+        if (currentiframe == document.getElementById("ifr1")) {
+            currentiframe = document.getElementById("ifr2");
+        } else {
+            currentiframe = document.getElementById("ifr1");
+        }
+    }
+
+    setTimeout(function() { LoadHome(); }, 100);
+</script>
