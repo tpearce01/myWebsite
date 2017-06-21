@@ -40,6 +40,61 @@
 </body>
 
 <!--Javascript-->
+<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBb5K6zcQINJoM7V3AFQodAqbMdrGKgRDQ",
+        authDomain: "mywebsite-5762c.firebaseapp.com",
+        databaseURL: "https://mywebsite-5762c.firebaseio.com",
+        projectId: "mywebsite-5762c",
+        storageBucket: "mywebsite-5762c.appspot.com",
+        messagingSenderId: "917882964767"
+    };
+    firebase.initializeApp(config);
+
+    var database = firebase.database();
+    var guestIP;
+
+    function write(IP) {
+        var previous;
+
+        firebase.database.ref(IP).once(IP, function(snapshot) {
+            previous = snapshot.val();
+        }, function(errorObject) {
+            alert("Read failed: " + errorObject.code);
+        })
+
+        firebase.database.ref(IP).set({
+            visitCounter: previous + 1,
+        });
+
+        var date = getMonth() +
+            '/' +
+            getDate() +
+            '/' +
+            getYear() +
+            ' @ ' +
+            getHour() +
+            '/' +
+            getMinutes() +
+            '/' +
+            getSeconds();
+
+        firebase.database.ref(IP + '/visitDates')
+            .set(date);
+    }
+</script>
+
+<script type="application/javascript">
+    function getIP(json) {
+      alert("My public IP address is: ", json.ip);
+    }
+</script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
+
 <script>
     var currentiframe = document.getElementById("ifr2");
     var lastFrameGame = false;
