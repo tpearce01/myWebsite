@@ -56,27 +56,18 @@
     var database = firebase.database();
 
     function write() {
-        var counter;
-        database.ref('SiteTraffic/')
-            .once('Visits',
-                function(snapshot) {
-                    counter = snapshot + 1;
+        var counter = 0;
+        database.ref('SiteTraffic/Visits')
+            .once('value').then(function(snapshot) {
+                counter = snapshot.val() + 1;
+                database.ref("SiteTraffic").set({
+                    Visits: counter
                 });
+            });
+        //alert(counter);
 
-        var date = getMonth() +
-            '/' +
-            getDate() +
-            '/' +
-            getYear() +
-            ' @ ' +
-            getHour() +
-            '/' +
-            getMinutes() +
-            '/' +
-            getSeconds();
+            
 
-        firebase.database.ref('SiteTraffic/Visits')
-            .set(counter);
     }
 
     write();
