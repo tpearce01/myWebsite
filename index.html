@@ -40,6 +40,48 @@
 </body>
 
 <!--Javascript-->
+<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBb5K6zcQINJoM7V3AFQodAqbMdrGKgRDQ",
+        authDomain: "mywebsite-5762c.firebaseapp.com",
+        databaseURL: "https://mywebsite-5762c.firebaseio.com",
+        projectId: "mywebsite-5762c",
+        storageBucket: "mywebsite-5762c.appspot.com",
+        messagingSenderId: "917882964767"
+    };
+    firebase.initializeApp(config);
+
+    var database = firebase.database();
+
+    function write() {
+        var counter;
+        database.ref('SiteTraffic/')
+            .once('Visits',
+                function(snapshot) {
+                    counter = snapshot + 1;
+                });
+
+        var date = getMonth() +
+            '/' +
+            getDate() +
+            '/' +
+            getYear() +
+            ' @ ' +
+            getHour() +
+            '/' +
+            getMinutes() +
+            '/' +
+            getSeconds();
+
+        firebase.database.ref('SiteTraffic/Visits')
+            .set(counter);
+    }
+
+    write();
+</script>
+
 <script>
     var currentiframe = document.getElementById("ifr2");
     var lastFrameGame = false;
