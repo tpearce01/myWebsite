@@ -4,14 +4,14 @@ var lastFrameGame = false;
 function LoadHome() {
     SwapFrame()
     currentiframe.src = "home.html";
-    currentiframe.height = "600vh";
+    currentiframe.height = "1000vw";
     lastFrameGame = false;
 }
 
 function LoadResume() {
     SwapFrame()
     currentiframe.src = "resume.html";
-    currentiframe.height = "1300vh";
+    currentiframe.height = "1000vw";
     lastFrameGame = false;
 }
 
@@ -39,14 +39,14 @@ function LoadFinalTrial() {
 function LoadContact() {
     SwapFrame();
     currentiframe.src = "contact.html";
-    currentiframe.height = "600vh";
+    currentiframe.height = "600vw";
     lastFrameGame = false;
 }
 
 function LoadWebsiteInfo() {
     SwapFrame();
     currentiframe.src = "website_info.html";
-    currentiframe.height = "600vh";
+    currentiframe.height = "600vw";
     lastFrameGame = false;
 }
 
