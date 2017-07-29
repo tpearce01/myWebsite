@@ -6,7 +6,7 @@ function LoadHome() {
     currentiframe.src = "home.html";
     currentiframe.height = "1000vw";
     lastFrameGame = false;
-}
+} 
 
 function LoadResume() {
     SwapFrame()
