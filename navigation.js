@@ -6,7 +6,7 @@ function LoadHome() {
     currentiframe.src = "home.html";
     currentiframe.height = "1000vw";
     lastFrameGame = false;
-} 
+}
 
 function LoadResume() {
     SwapFrame()
@@ -25,7 +25,7 @@ function LoadFlappy() {
 function LoadSC() {
     SwapFrame();
     currentiframe.src = "SCWeb/index.html"
-    currentiframe.height = "1000px";
+    currentiframe.height = "1400px";
     lastFrameGame = true;
 }
 
