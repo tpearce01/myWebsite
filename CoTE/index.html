@@ -9,17 +9,20 @@
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/cote.json", {onProgress: UnityProgress});
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/CoTE.json", {onProgress: UnityProgress});
     </script>
   </head>
   <body>
     <div class="webgl-content">
       <div style="width: 960px; margin: 0 auto;">
-      <div id="gameContainer" style="width: 960px; height: 540px"></div>
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
     </div>
-    <h1>
-      Cat On The Eyeway
-    </h1>
-    </div>
+    <div id="about" style="font-family: 'ABeeZee';">
+              <br /><br />
+              <h1>Cat On The Eyeway</h1>
+              <ul>
+                <li>Roles: Art, Programming</li>
+              </ul>
+  </div>
   </body>
 </html>
