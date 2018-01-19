@@ -36,6 +36,13 @@ function LoadFinalTrial() {
     lastFrameGame = true;
 }
 
+function LoadCOTE(){
+  SwapFrame();
+  currentiframe.src = "CoTE/index.html"
+  currentiframe.height = "1000px";
+  lastFrameGame = true;
+}
+
 function LoadContact() {
     SwapFrame();
     currentiframe.src = "contact.html";
